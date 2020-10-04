@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RBMS</string>
+    <string name="msg33">REGISTER</string>
+    <string name="msg34">SIGN UP</string>
 </resources>

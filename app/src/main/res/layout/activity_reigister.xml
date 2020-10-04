@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UpdateLecturer">
+    tools:context=".Reigister">
 
     <TextView
         android:id="@+id/textView11"
@@ -27,7 +27,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="200dp"
         android:layout_marginRight="200dp"
-        android:text="Admin's Name"
+        android:hint="Admin's Name"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
         app:layout_constraintEnd_toStartOf="@+id/textView11"
         app:layout_constraintHorizontal_bias="0.5"
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:text="Update Lecturer"
+        android:text="Create Admin"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,7 +154,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
-        android:text="Subject"
+        android:text="Password"
         app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName8"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
@@ -215,13 +215,12 @@
         android:id="@+id/button5"
         android:layout_width="248dp"
         android:layout_height="71dp"
-        android:text="Save"
+        android:text="@string/msg33"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8"
         app:layout_constraintVertical_bias="0.234" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

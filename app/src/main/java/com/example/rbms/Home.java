@@ -1,5 +1,6 @@
 package com.example.rbms;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,13 +10,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class Home extends AppCompatActivity {
 
     private EditText name;
     private EditText password;
-    private Button login;
+    private Button login,regi;
     private int counter=5;
     private TextView info;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +33,11 @@ public class Home extends AppCompatActivity {
         name =(EditText)findViewById(R.id.editTextTextPersonName);
         password =(EditText)findViewById(R.id.editTextTextPersonName2);
         login = (Button) findViewById(R.id.button);
+        regi = findViewById(R.id.button16);
         info = (TextView)findViewById(R.id.textView46);
+
+
+
 
         info.setText("Number of Attempts Remaining : 5");
 
@@ -38,7 +50,8 @@ public class Home extends AppCompatActivity {
 
     }
 
-    private void validate(String userName,String userPassword ){
+
+    private void validate(String userName, String userPassword ){
         if ((userName.equals("Admin")) && (userPassword.equals("1234"))) {
             Intent intent = new Intent(Home.this, adminDashBoard.class);
             startActivity(intent);
@@ -71,5 +84,17 @@ public class Home extends AppCompatActivity {
 
             }
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        regi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent regp = new Intent(Home.this,Reigister.class);
+                startActivity(regp);
+            }
+        });
     }
 }
